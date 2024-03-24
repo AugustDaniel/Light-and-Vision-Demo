@@ -1,6 +1,6 @@
 package application.view.renderingview;
 
-import application.level.LevelFirstPersonDemo;
+import application.level.premade.FirstPersonDemoLevel;
 import application.rendering.RenderingEngine;
 import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
@@ -15,17 +15,19 @@ import java.awt.geom.Point2D;
 
 public class FirstPersonView extends RenderingView {
     private double angle;
+    private double scale;
 
     @Override
     public void init() {
         this.angle = Math.PI / 2;
-        this.lineSegments = new LevelFirstPersonDemo().getLineSegments();
+        this.scale = 2;
+        this.lineSegments = FirstPersonDemoLevel.getLineSegments(scale);
     }
 
     @Override
     public void initEngine() {
         this.engine = new RenderingEngine(this.lineSegments, this.rays, RenderingEngine.Mode.VISION);
-        this.engine.setPosition(new Point2D.Double(50, 50));
+        this.engine.setPosition(new Point2D.Double(50 * scale, 50 * scale));
         this.engine.setAngle(this.angle);
         this.engine.update();
     }

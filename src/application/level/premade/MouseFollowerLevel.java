@@ -1,16 +1,19 @@
-package application.level;
+package application.level.premade;
 
+import application.level.LevelGenerator;
 import util.LineSegment;
 
 import java.awt.geom.Point2D;
 import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
-public class LevelMouseFollower extends Level {
+public class MouseFollowerLevel {
 
-    @Override
-    public void initialiseLevel() {
-        lineSegments.addAll(LevelGenerator.getLevelBorders(650, 600));
-        Collections.addAll(this.lineSegments,
+    public static List<LineSegment> getLineSegments(double screenWidth, double screenHeight) {
+        List<LineSegment> lineSegments = new LinkedList<>(LevelGenerator.getLevelBorders(screenWidth, screenHeight));
+
+        Collections.addAll(lineSegments,
                 new LineSegment(
                         new Point2D.Double(100, 100),
                         new Point2D.Double(200, 300)
@@ -28,5 +31,7 @@ public class LevelMouseFollower extends Level {
                         new Point2D.Double(350, 350)
                 )
         );
+
+        return lineSegments;
     }
 }

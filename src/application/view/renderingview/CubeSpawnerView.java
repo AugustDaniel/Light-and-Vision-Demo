@@ -1,6 +1,6 @@
 package application.view.renderingview;
 
-import application.level.LevelTest;
+import application.level.LevelGenerator;
 import application.rendering.Renderable;
 import application.rendering.RenderingEngine;
 import javafx.scene.Node;
@@ -24,8 +24,7 @@ public class CubeSpawnerView extends RenderingView {
 
     @Override
     public void init() {
-        this.lineSegments.addAll(new LevelTest().getLineSegments());
-
+        this.lineSegments = new ArrayList<>();
         this.renderables = new ArrayList<>();
         this.renderables.add(
                 new Renderable(
@@ -129,7 +128,7 @@ public class CubeSpawnerView extends RenderingView {
             this.lineSegments.addAll(r.getLineSegments());
         }
 
-        this.lineSegments.addAll(new LevelTest().getLineSegments());
+        this.lineSegments.addAll(LevelGenerator.getLevelBorders(canvas.getWidth(), canvas.getHeight() + 25));
     }
 
 

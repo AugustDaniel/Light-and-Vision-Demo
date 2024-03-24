@@ -12,27 +12,29 @@ import java.util.List;
 
 public class LevelGenerator {
 
-    public static List<LineSegment> getLineSegments(int[][] map, int blockWidth, int blockHeight) {
+    public static List<LineSegment> getLineSegments(int[][] map, double blockWidth, double blockHeight) {
         List<LineSegment> lineSegments = new LinkedList<>();
 
         for (int x = 0; x < map.length; x++) {
 
             for (int y = 0; y < map[x].length; y++) {
-                lineSegments.addAll(
-                        new Renderable(
-                                new Point2D.Double(x * blockWidth, y * blockWidth),
-                                new Rectangle2D.Double(0, 0, blockWidth, blockHeight),
-                                Color.PINK,
-                                1)
-                                .getLineSegments()
-                );
+                if(map[x][y] == 1) {
+                    lineSegments.addAll(
+                            new Renderable(
+                                    new Point2D.Double(y * blockWidth, x * blockWidth),
+                                    new Rectangle2D.Double(0, 0, blockWidth, blockHeight),
+                                    Color.PINK,
+                                    1)
+                                    .getLineSegments()
+                    );
+                }
             }
         }
 
         return lineSegments;
     }
 
-    public static List<LineSegment> getLevelBorders(int levelWidth, int levelHeight) {
+    public static List<LineSegment> getLevelBorders(double levelWidth, double levelHeight) {
         List<LineSegment> lineSegments = new LinkedList<>();
 
         Collections.addAll(lineSegments,

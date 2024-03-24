@@ -1,6 +1,6 @@
 package application.view.renderingview;
 
-import application.level.LevelMouseFollower;
+import application.level.premade.MouseFollowerLevel;
 import application.rendering.RenderingEngine;
 import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
@@ -15,7 +15,7 @@ public class MouseFollowerView extends RenderingView {
 
     @Override
     public void init() {
-        this.lineSegments.addAll(new LevelMouseFollower().getLineSegments());
+        this.lineSegments.addAll(MouseFollowerLevel.getLineSegments(canvas.getWidth(), canvas.getHeight() + 25));
     }
 
     @Override
