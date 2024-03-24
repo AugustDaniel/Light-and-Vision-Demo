@@ -38,7 +38,7 @@ public class GuiMain extends Application {
 
         pane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
         primaryStage.setScene(new Scene(pane));
-        primaryStage.setTitle("Eindopdracht Jayson Leander");
+        primaryStage.setTitle("Light and Vision Demo Jayson Leander");
         primaryStage.show();
     }
 }
