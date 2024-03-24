@@ -9,9 +9,7 @@ public class LevelMouseFollower extends Level {
 
     @Override
     public void initialiseLevel() {
-        Level borders = new LevelBorders();
-
-        getLineSegments().addAll(borders.getLineSegments());
+        lineSegments.addAll(LevelGenerator.getLevelBorders(650, 600));
         Collections.addAll(this.lineSegments,
                 new LineSegment(
                         new Point2D.Double(100, 100),
