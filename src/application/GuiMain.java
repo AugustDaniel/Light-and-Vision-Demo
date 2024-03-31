@@ -18,6 +18,10 @@ public class GuiMain extends Application {
 
     private List<View> views;
 
+    public static void main(String[] args) {
+        launch(GuiMain.class);
+    }
+
     @Override
     public void init() {
         this.views = new ArrayList<>();
