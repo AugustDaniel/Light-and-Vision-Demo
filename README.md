@@ -6,7 +6,7 @@ This project demonstrates light and vision capabilities in a 2D world.
 
 - To successfully build the application, fxgraphics2d-1.10.jar needs to be added to the library of the project. The jar is located in the /lib folder.
 - Because of the usage of JavaFX, Java 1.8 must be set as the SDK.
-- Entrypoint into the application is GuiMain.java
+- Entrypoint into the application is GuiMain.java located in the application package.
 
 # Inspired by
 
