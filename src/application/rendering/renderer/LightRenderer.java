@@ -6,7 +6,6 @@ import util.LineSegment;
 import java.awt.*;
 import java.awt.geom.Area;
 import java.awt.geom.Point2D;
-import java.awt.geom.Rectangle2D;
 import java.util.List;
 
 public class LightRenderer extends AreaRenderer {
@@ -40,9 +39,9 @@ public class LightRenderer extends AreaRenderer {
 
     @Override
     public void draw(FXGraphics2D graphics) {
-        RadialGradientPaint light = new RadialGradientPaint(pos, 500, new float[]{0.1f, 0.2f} ,new Color[]{Color.BLUE, Color.WHITE});
+        RadialGradientPaint light = new RadialGradientPaint(pos, 500, new float[]{0.1f, 0.2f} ,new Color[]{Color.YELLOW, Color.BLACK});
         graphics.setPaint(light);
         graphics.fill(combinedPoly);
-
+        graphics.setPaint(null);
     }
 }

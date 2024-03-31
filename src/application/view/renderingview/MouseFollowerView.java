@@ -46,13 +46,15 @@ public class MouseFollowerView extends RenderingView {
     @Override
     public void draw(FXGraphics2D graphics) {
         graphics.setTransform(new AffineTransform());
-        graphics.setBackground(Color.WHITE);
+        graphics.setBackground(Color.BLACK);
         graphics.clearRect(0, 0, (int) this.canvas.getWidth(), (int) this.canvas.getHeight());
 
+        this.engine.draw(graphics);
+
+        graphics.setColor(Color.WHITE);
         for (LineSegment s : this.lineSegments) {
             s.draw(graphics);
         }
-
-        this.engine.draw(graphics);
+        graphics.setColor(Color.BLACK);
     }
 }
