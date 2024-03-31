@@ -39,7 +39,7 @@ public class LightRenderer extends AreaRenderer {
 
     @Override
     public void draw(FXGraphics2D graphics) {
-        RadialGradientPaint light = new RadialGradientPaint(pos, 500, new float[]{0.1f, 0.2f} ,new Color[]{Color.YELLOW, Color.BLACK});
+        RadialGradientPaint light = new RadialGradientPaint(pos, 500, new float[]{0.1f, 0.5f} ,new Color[]{Color.YELLOW, Color.BLACK});
         graphics.setPaint(light);
         graphics.fill(combinedPoly);
         graphics.setPaint(null);
