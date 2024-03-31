@@ -18,7 +18,7 @@ To mimic a real light source the application will render the light in real time.
 
 ## First person perspective
 
-The last tab contains a 2D map made out of blocks on the right half of the screen. Inside this map a dot representing the player is drawn along with its field of vision.
+The last tab contains a 2D map made out of blocks on the right half of the screen. Inside this map a dot representing the player is drawn, along with its field of vision.
 
 On the left half of the screen a semi-3D visualisation of the 2D map is drawn from the perspective of the player.
 
