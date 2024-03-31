@@ -6,7 +6,7 @@ The application is designed to be ran at the windowsize at which it launches. If
 
 ## Mouse follower
 
-The first tab contains a light source that will follow your mouse when moved around in the application. The light will be blocked by walls to mimic a real light source.
+The first tab contains a light source that will follow your mouse, when moved, around in the application. The light will be blocked by walls to mimic a real light source.
  
 ## Cube spawner
 
