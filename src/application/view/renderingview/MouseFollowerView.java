@@ -15,7 +15,7 @@ public class MouseFollowerView extends RenderingView {
 
     @Override
     public void init() {
-        this.lineSegments.addAll(MouseFollowerLevel.getLineSegments(canvas.getWidth(), canvas.getHeight() + 25));
+        this.lineSegments.addAll(MouseFollowerLevel.getLineSegments(canvas.getWidth() + 30, canvas.getHeight() + 30));
     }
 
     @Override
