@@ -22,7 +22,7 @@ The last tab contains a 2D map made out of blocks on the right half of the scree
 
 On the left half of the screen a semi-3D visualisation of the 2D map is drawn from the perspective of the player.
 
-The player can be moved forward into the direction of its field of vision by clicking the left mouse button repeatedly. The field of vision can be turned into any direction by scrolling on the mouse wheel.
+The player can be moved forward into the direction of its field of vision by clicking the left mouse button repeatedly. The field of vision can be turned into any direction by scrolling up or down on the mouse wheel.
 
 # Build requirements
 
