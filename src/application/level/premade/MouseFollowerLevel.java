@@ -23,12 +23,12 @@ public class MouseFollowerLevel {
                         new Point2D.Double(600, 300)
                 ),
                 new LineSegment(
-                        new Point2D.Double(300, 90),
+                        new Point2D.Double(275, 100),
                         new Point2D.Double(400, 100)
                 ),
                 new LineSegment(
                         new Point2D.Double(250, 400),
-                        new Point2D.Double(350, 350)
+                        new Point2D.Double(350, 400)
                 )
         );
 

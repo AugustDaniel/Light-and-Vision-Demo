@@ -20,7 +20,7 @@ public class MouseFollowerView extends RenderingView {
 
     @Override
     public void initEngine() {
-        this.engine = new RenderingEngine(this.lineSegments, this.rays, RenderingEngine.Mode.AREA);
+        this.engine = new RenderingEngine(this.lineSegments, this.rays, RenderingEngine.Mode.LIGHT);
         this.engine.update();
     }
 
@@ -49,10 +49,10 @@ public class MouseFollowerView extends RenderingView {
         graphics.setBackground(Color.WHITE);
         graphics.clearRect(0, 0, (int) this.canvas.getWidth(), (int) this.canvas.getHeight());
 
-        this.engine.draw(graphics);
-
         for (LineSegment s : this.lineSegments) {
             s.draw(graphics);
         }
+
+        this.engine.draw(graphics);
     }
 }
